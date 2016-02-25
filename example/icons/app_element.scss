@@ -1,0 +1,73 @@
+@import 'packages/bwu_ng_elements/style/material/_palette';
+@import 'packages/bwu_ng_elements/style/material/_variables';
+@import 'packages/bwu_ng_elements/style/material/_mixins';
+@import 'packages/bwu_ng_elements/style/material/_typography';
+@import 'packages/bwu_ng_elements/style/material/_structure';
+@import 'packages/bwu_ng_elements/style/material/_layout';
+
+
+@include layouts_for_breakpoint();
+@include layout-padding-margin();
+
+:host {
+  @extend %paper-font-common-base;
+}
+
+h2 {
+  text-transform: capitalize;
+}
+
+.icon-title {
+  @extend %md-caption;
+}
+
+bwu-icon {
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+}
+
+bwu-icon:hover {
+  fill: map_get($md-yellow, 700);
+}
+
+.set {
+  margin: auto;
+  padding: 1em 0;
+  border-bottom: 1px solid silver;
+  @extend %layout-row;
+  @extend %layout-wrap;
+}
+
+.set:last-of-type {
+  border-bottom: none;
+}
+
+.set:nth-of-type(4n-3) {
+  color: map_get($md-grey,700);
+}
+
+.set:nth-of-type(4n-2) {
+  color: map_get($md-pink,500);
+}
+
+.set:nth-of-type(4n-1) {
+  color: map_get($md-green,500);
+}
+
+.set:nth-of-type(4n) {
+  color: map_get($md-blue,500);
+}
+
+.container {
+  min-width: 10em;
+  padding: 1em 0.5em;
+  text-align: center;
+  @extend %layout-column;
+  @extend %layout-align-center-center;
+  //@extend %layout-flex;
+}
+.container > div {
+  margin-top: 0.5em;
+  color: black;
+  font-size: 10px;
+}

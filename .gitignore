@@ -4,5 +4,8 @@
 build/
 packages
 .packages
+**/*.css
+**/*.css.map
+node_modules
 
 

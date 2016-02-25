@@ -14,9 +14,11 @@ class IconSetRegistry {
   Map<String, BwuIconSetSvg> get iconSets => _iconSetsView;
 
   final StreamController<String> _iconSetAdded = new StreamController<String>();
-  Stream<String> get iconSetAdded => _iconSetAdded.stream;
+  Stream<String> _iconSetAddedStream;
+  Stream<String> get iconSetAdded => _iconSetAddedStream;
 
   IconSetRegistry() {
+    _iconSetAddedStream = _iconSetAdded.stream.asBroadcastStream();
     _iconSetsView = new UnmodifiableMapView<String, BwuIconSetSvg>(_iconSets);
   }
 

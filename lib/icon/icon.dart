@@ -2,6 +2,7 @@ library bwu_ng_elements.icon.icon;
 
 import 'package:angular2/core.dart'
     show
+        AfterViewInit,
         Component,
         ElementRef,
         Input,
@@ -10,13 +11,15 @@ import 'package:angular2/core.dart'
         ViewChild,
         ViewEncapsulation;
 import 'dart:svg' show SvgElement;
-import 'package:bwu_ng_elements/icon/iconset_registry.dart' show IconSetRegistry;
+import 'package:bwu_ng_elements/icon/iconset_registry.dart'
+    show IconSetRegistry;
 import 'package:bwu_ng_elements/icon/iconset_svg.dart' show BwuIconSetSvg;
 import 'dart:html' show Element;
 
 @Component(
     selector: 'bwu-icon',
     encapsulation: ViewEncapsulation.Native,
+    host: const {'[style.width]': 'width', '[style.height]': 'height',},
     template: '''
 <svg #icon
   [attr.viewBox]="viewBoxSize"
@@ -25,16 +28,15 @@ import 'dart:html' show Element;
   style="pointer-events: none; display: block; width: 100%; height: 100%;"
   >
 </svg>
-{{width}}
 ''',
-    host: const {
-      '[style.width]': 'width',
-      '[style.height]': 'height',
-      '[style.display]': '"block"'
-    }
-//    styles: const []
-    )
-class BwuIcon implements OnChanges {
+    styles: const [
+      '''
+:host {
+  display: block;
+  fill: currentcolor;
+}'''
+    ])
+class BwuIcon implements AfterViewInit, OnChanges {
   SvgElement _svgIcon;
   SvgElement get svgIcon => _svgIcon;
 
@@ -108,7 +110,7 @@ class BwuIcon implements OnChanges {
     if (_svgIcon != null) {
       _svgIcon.remove();
     }
-    if (iconName != null && iconName.isNotEmpty) {
+    if (iconRef != null && iconName != null && iconName.isNotEmpty) {
       final BwuIconSetSvg iconSet = _getIconSet(iconName);
       if (iconSet != null) {
         String iconId = iconName.contains(':')
@@ -120,5 +122,10 @@ class BwuIcon implements OnChanges {
         }
       }
     }
+  }
+
+  @override
+  void ngAfterViewInit() {
+    _updateIcon(icon);
   }
 }

@@ -70,4 +70,4 @@ import 'package:bwu_ng_elements/icon.dart' show BwuIcon, BwuIconSetSvg;
 </defs></svg>
 </bwu-iconset-svg>
 ''')
-class BwuCommunicationsIcons {}
+class BwuCommunicationIcons {}

@@ -1,0 +1,208 @@
+/* Source: https://github.com/angular/material */
+
+// Global page styles
+//
+// [2] Ensure the page always fills at least the entire height of the viewport.
+// [3] Prevent iOS text size adjust after orientation change, without disabling user zoom
+// [4] Fonts on OSX will look more consistent with other systems that do not
+// render text using sub-pixel anti-aliasing.
+
+@import 'variables';
+@import 'mixins';
+
+/*
+md-select, md-card, md-list, md-toolbar,
+ul, ol, p, h1, h2, h3, h4, h5, h6 {
+  //text-rendering: optimizeLegibility;
+}
+*/
+
+/************
+ * Headings
+ ************/
+%md-display-4 {
+  font-size: $display-4-font-size-base;
+  font-weight: 300;
+  letter-spacing: -0.010em;
+  line-height: $display-4-font-size-base;
+}
+%md-display-3 {
+  font-size: $display-3-font-size-base;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  line-height: $display-3-font-size-base;
+}
+%md-display-2 {
+  font-size: $display-2-font-size-base;
+  font-weight: 400;
+  line-height: rem(6.4);
+}
+%md-display-1 {
+  font-size: $display-1-font-size-base;
+  font-weight: 400;
+  line-height: rem(4);
+}
+%md-headline {
+  font-size: $headline-font-size-base;
+  font-weight: 400;
+  line-height: rem(3.2);
+}
+%md-title {
+  @include md-title();
+}
+%md-subhead {
+  @include md-subhead();
+}
+/************
+ * Body Copy
+ ************/
+%md-body-1 {
+  @include md-body-1();
+}
+%md-body-2 {
+  @include md-body-2();
+}
+%md-caption {
+  font-size: $caption-font-size-base;
+  letter-spacing: 0.020em;
+}
+%md-button {
+  letter-spacing: 0.010em;
+}
+
+/************
+ * Defaults
+ ************/
+
+%button,
+%select,
+%html,
+%textarea,
+%input {
+  font-family: $font-family;
+}
+
+%select,
+%button,
+%textarea,
+%input {
+  font-size: 100%;
+}
+
+// source: https://github.com/PolymerElements/paper-styles/blob/master/typography.html
+/* Shared Styles */
+%paper-font-common-base {
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+%paper-font-common-code {
+  font-family: 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  -webkit-font-smoothing: antialiased;
+}
+%paper-font-common-expensive-kerning {
+  text-rendering: optimizeLegibility;
+}
+%paper-font-common-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* Material Font Styles */
+%paper-font-display4 {
+  @extend %paper-font-common-base;
+  @extend %paper-font-common-nowrap;
+  font-size: 112px;
+  font-weight: 300;
+  letter-spacing: -.044em;
+  line-height: 120px;
+}
+%paper-font-display3 {
+  @extend %paper-font-common-base;
+  @extend %paper-font-common-nowrap;
+  font-size: 56px;
+  font-weight: 400;
+  letter-spacing: -.026em;
+  line-height: 60px;
+}
+%paper-font-display2 {
+  @extend %paper-font-common-base;
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: -.018em;
+  line-height: 48px;
+}
+%paper-font-display1 {
+  @extend %paper-font-common-base;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  line-height: 40px;
+}
+%paper-font-headline {
+  @extend %paper-font-common-base;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -.012em;
+  line-height: 32px;
+}
+%paper-font-title {
+  @extend %paper-font-common-base;
+  @extend %paper-font-common-nowrap;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+%paper-font-subhead {
+  @extend %paper-font-common-base;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+%paper-font-body2 {
+  @extend %paper-font-common-base;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+%paper-font-body1 {
+  @extend %paper-font-common-base;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+%paper-font-caption {
+  @extend %paper-font-common-base;
+  @extend %paper-font-common-nowrap;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+  line-height: 20px;
+}
+%paper-font-menu {
+  @extend %paper-font-common-base;
+  @extend %paper-font-common-nowrap;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 24px;
+}
+%paper-font-button {
+  @extend %paper-font-common-base;
+  @extend %paper-font-common-nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.018em;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+%paper-font-code2 {
+  @extend %paper-font-common-code;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+%paper-font-code1 {
+  @extend %paper-font-common-code;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+};

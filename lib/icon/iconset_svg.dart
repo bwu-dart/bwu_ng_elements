@@ -67,7 +67,8 @@ class BwuIconSetSvg implements OnChanges, AfterContentInit {
   }
 
   List<String> get iconNames {
-    return _icons.keys.map((String id) => '$name:$id').toList();
+    final String iconSetPrefix = name == _iconSetRegistry.defaultIconSetName ? '' : '$name:';
+    return _icons.keys.map((String id) => '$iconSetPrefix$id').toList();
   }
 
   SvgElement getIcon(String id) => _icons[id]?.clone(true);

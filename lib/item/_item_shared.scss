@@ -1,0 +1,37 @@
+@import '../style/material/layout';
+@import '::bwu_ng_elements:item_shared:theme::_item_shared_defaults';
+
+$paper-item-min-height: 48 !default;
+$paper-item-selected-weight: bold !default;
+$paper-item-disabled-color: $disabled-text-color !default;
+
+:host {
+  display: block;
+  position: relative;
+  min-height: $paper-item-min-height;
+  padding: 0px 16px;
+}
+:host([hidden]) {
+  display: none !important;
+}
+:host(.iron-selected) {
+  font-weight: $paper-item-selected-weight;
+  @include paper-item-selected();
+}
+:host([disabled]) {
+  color: $paper-item-disabled-color;
+  @include paper-item-disabled();
+}
+:host(:focus) {
+  position: relative;
+  outline: 0;
+  @include paper-item-focused();
+}
+:host(:focus):before {
+  @extend %layout-fill; //%layout-fit;
+  background: currentColor;
+  content: '';
+  opacity: $dark-divider-opacity;
+  pointer-events: none;
+  @include paper-item-focused-before;
+}
