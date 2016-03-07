@@ -12,13 +12,13 @@ packages:
       name: angular2
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0-beta.7"
+    version: "2.0.0-beta.8"
   args:
     description:
       name: args
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.13.3+3"
+    version: "0.13.3+6"
   async:
     description:
       name: async
@@ -37,6 +37,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.10.0+2"
+  bwu_sass_transformer:
+    description:
+      path: "../bwu_sass_transformer"
+      relative: true
+    source: path
+    version: "0.4.2"
   charcode:
     description:
       name: charcode
@@ -54,7 +60,7 @@ packages:
       name: code_transformers
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.0"
+    version: "0.4.1"
   collection:
     description:
       name: collection
@@ -186,7 +192,7 @@ packages:
       name: source_span
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.1"
+    version: "1.2.2"
   stack_trace:
     description:
       name: stack_trace

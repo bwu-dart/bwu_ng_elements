@@ -18,6 +18,8 @@ import 'package:bwu_ng_elements/icon/iconset_registry.dart' show IconSetRegistry
     template: '<ng-content></ng-content>',
     styles: const [':host { display: none; }'])
 class BwuIconSetSvg implements OnChanges, AfterContentInit {
+  static int defaultSize = 24;
+
   @ContentChildren('icon')
   QueryList<ElementRef> icons;
 
@@ -26,7 +28,7 @@ class BwuIconSetSvg implements OnChanges, AfterContentInit {
   @Input()
   String name;
 
-  int _size = 24;
+  int _size = defaultSize;
   @Input()
   int get size => _size;
   @Input()

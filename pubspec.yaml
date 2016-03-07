@@ -13,12 +13,15 @@ dependencies:
 
 dev_dependencies:
   dart_to_js_script_rewriter: ^0.1.0
+  bwu_sass_transformer:
+    path: ../bwu_sass_transformer
 transformers:
 # transformer options
 # https://github.com/angular/angular/blob/master/modules_dart/transform/lib/src/transform/common/options.dart#L20
 transformers:
-- sass:
-    executable: /usr/local/bin/sass    # Sass executable to use
+#- sass
+- bwu_sass_transformer
+#    executable: /usr/local/bin/sass    # Sass executable to use
 #    compass: false                # Include compass
 #    line-numbers: true            # Include line numbers in output
 #    style: compact                # Style of generated CSS

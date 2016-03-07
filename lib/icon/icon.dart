@@ -79,6 +79,9 @@ class BwuIcon implements AfterViewInit, OnChanges {
       return '0 0 $size $size';
     }
     final BwuIconSetSvg iconSet = _getIconSet(icon);
+    if(iconSet == null) {
+      return '0 0 ${BwuIconSetSvg.defaultSize} ${BwuIconSetSvg.defaultSize}';
+    }
     return '0 0 ${iconSet.size} ${iconSet.size}';
   }
 

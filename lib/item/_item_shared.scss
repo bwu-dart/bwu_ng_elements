@@ -1,7 +1,7 @@
 @import '../style/material/layout';
 @import '::bwu_ng_elements:item_shared:theme::_item_shared_defaults';
 
-$paper-item-min-height: 48 !default;
+$paper-item-min-height: 48px !default;
 $paper-item-selected-weight: bold !default;
 $paper-item-disabled-color: $disabled-text-color !default;
 
@@ -33,5 +33,5 @@ $paper-item-disabled-color: $disabled-text-color !default;
   content: '';
   opacity: $dark-divider-opacity;
   pointer-events: none;
-  @include paper-item-focused-before;
+  @include paper-item-focused-before();
 }

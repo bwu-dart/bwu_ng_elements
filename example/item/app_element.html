@@ -1,0 +1,60 @@
+<div class="vertical-section-container centered">
+  <h3>Paper-items are simple list elements, ideally used in a paper-listbox or
+  an element with <i>role="listbox"</i></h3>
+  <demo-snippet>
+    <template>
+      <div role="listbox">
+        <paper-item>Inbox</paper-item>
+        <paper-item>Starred</paper-item>
+        <paper-item>Sent mail</paper-item>
+      </div>
+    </template>
+  </demo-snippet>
+
+  <h3>They can be styled using custom properties</h3>
+  <demo-snippet>
+    <template>
+      <style is="custom-style">
+        paper-item.fancy {
+          --paper-item-focused: {
+            background: var(--paper-amber-500);
+            font-weight: bold;
+          };
+          --paper-item-focused-before: {
+            opacity: 0;
+          };
+        }
+      </style>
+      <div role="listbox">
+        <paper-item class="fancy">Inbox</paper-item>
+        <paper-item class="fancy">Starred</paper-item>
+        <paper-item class="fancy">Sent mail</paper-item>
+      </div>
+    </template>
+  </demo-snippet>
+
+  <h3>To add a leading element, use a paper-icon-item with an <i>item-icon</i> attribute. This
+  leading image can be an iron-icon, or any other regular element.</h3>
+  <demo-snippet>
+    <template>
+      <div role="listbox">
+       <paper-icon-item>
+           <iron-icon icon="inbox" item-icon></iron-icon>
+          Inbox
+        </paper-icon-item>
+        <paper-icon-item>
+          <iron-icon icon="star" item-icon></iron-icon>
+          Starred
+        </paper-icon-item>
+        <paper-icon-item>
+          <div class="avatar blue" item-icon></div>
+          Alphonso Engelking
+        </paper-icon-item>
+        <paper-icon-item>
+          <div class="avatar" item-icon></div>
+          Angela Decker
+        </paper-icon-item>
+      </div>
+    </template>
+  </demo-snippet>
+</div>

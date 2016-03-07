@@ -1,9 +1,9 @@
-@import '::bwu_ng_elements:item:palette::../style/material/_palette';
-@import '::bwu_ng_elements:item:variables::../style/material/_variables';
-@import '::bwu_ng_elements:item:mixins::../style/material/_mixins';
-@import '::bwu_ng_elements:item:theme::_item_shared';
+@import '::bwu_ng_elements:item:palette::packages/bwu_ng_elements/style/material/_palette';
+@import '::bwu_ng_elements:item:variables::packages/bwu_ng_elements/style/material/_variables';
+@import '::bwu_ng_elements:item:mixins::packages/bwu_ng_elements/style/material/_mixins';
+@import '::bwu_ng_elements:item:theme::packages/bwu_ng_elements/item/_item_shared';
 
-@import 'item_shared';
+@import 'packages/bwu_ng_elements/item/item_shared';
 
 :host {
   @extend %layout-row;
