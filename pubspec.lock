@@ -12,7 +12,7 @@ packages:
       name: angular2
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0-beta.8"
+    version: "2.0.0-beta.9"
   args:
     description:
       name: args
@@ -24,7 +24,7 @@ packages:
       name: async
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.8.0"
+    version: "1.9.0"
   barback:
     description:
       name: barback
@@ -108,7 +108,7 @@ packages:
       name: glob
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.0"
+    version: "1.1.1"
   html:
     description:
       name: html
@@ -169,12 +169,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.5.0+1"
-  sass:
-    description:
-      name: sass
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.4.2"
   smoke:
     description:
       name: smoke

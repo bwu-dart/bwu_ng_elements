@@ -1,13 +1,18 @@
 @import '::bwu_ng_elements:item:palette::packages/bwu_ng_elements/style/material/_palette';
 @import '::bwu_ng_elements:item:variables::packages/bwu_ng_elements/style/material/_variables';
 @import '::bwu_ng_elements:item:mixins::packages/bwu_ng_elements/style/material/_mixins';
-@import '::bwu_ng_elements:item:theme::packages/bwu_ng_elements/item/_item_shared';
+@import '::bwu_ng_elements:item:layout::packages/bwu_ng_elements/style/material/_layout';
+@import '::bwu_ng_elements:item:typography::packages/bwu_ng_elements/style/material/_typography';
 
-@import 'packages/bwu_ng_elements/item/item_shared';
+@import '::bwu_ng_elements:item:theme::packages/bwu_ng_elements/item/_default_theme';
+@import 'packages/bwu_ng_elements/item/_item_shared';
+
+@include layouts-for-breakpoint();
 
 :host {
   @extend %layout-row;
-  @extend %layout-align-center-center;
+  @extend %layout-align-start-center;
   @extend %paper-font-subhead;
-  @extend %paper-item;
 }
+
+@include bwu-item();

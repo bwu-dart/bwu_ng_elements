@@ -1,31 +1,27 @@
-@import '../style/material/layout';
-@import '::bwu_ng_elements:item_shared:theme::_item_shared_defaults';
+$bwu-item-min-height: 48px !default;
+$bwu-item-selected-weight: bold !default;
+$bwu-item-disabled-color: $disabled-text-color !default;
 
-$paper-item-min-height: 48px !default;
-$paper-item-selected-weight: bold !default;
-$paper-item-disabled-color: $disabled-text-color !default;
+@include layouts-for-breakpoint();
 
 :host {
   display: block;
   position: relative;
-  min-height: $paper-item-min-height;
-  padding: 0px 16px;
+  min-height: $bwu-item-min-height;
+  padding: 0 16px;
 }
 :host([hidden]) {
   display: none !important;
 }
-:host(.iron-selected) {
-  font-weight: $paper-item-selected-weight;
-  @include paper-item-selected();
+:host(.bwu-selected) {
+  font-weight: $bwu-item-selected-weight;
 }
 :host([disabled]) {
-  color: $paper-item-disabled-color;
-  @include paper-item-disabled();
+  color: $bwu-item-disabled-color;
 }
 :host(:focus) {
   position: relative;
   outline: 0;
-  @include paper-item-focused();
 }
 :host(:focus):before {
   @extend %layout-fill; //%layout-fit;
@@ -33,5 +29,4 @@ $paper-item-disabled-color: $disabled-text-color !default;
   content: '';
   opacity: $dark-divider-opacity;
   pointer-events: none;
-  @include paper-item-focused-before();
 }

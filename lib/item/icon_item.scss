@@ -1,0 +1,27 @@
+@import '::bwu_ng_elements:icon_item:palette::packages/bwu_ng_elements/style/material/_palette';
+@import '::bwu_ng_elements:icon_item:variables::packages/bwu_ng_elements/style/material/_variables';
+@import '::bwu_ng_elements:icon_item:mixins::packages/bwu_ng_elements/style/material/_mixins';
+@import '::bwu_ng_elements:icon_item:layout::packages/bwu_ng_elements/style/material/_layout';
+@import '::bwu_ng_elements:icon_item:typography::packages/bwu_ng_elements/style/material/_typography';
+
+@import '::bwu_ng_elements:icon_item:theme::packages/bwu_ng_elements/item/_default_theme';
+@import 'packages/bwu_ng_elements/item/_item_shared';
+
+
+$bwu-item-icon-width: 56px !default;
+
+@include layouts-for-breakpoint();
+
+:host {
+  @extend %layout-row;
+  @extend %layout-align-start-center;
+  @extend %paper-font-subhead;
+}
+
+.content-icon {
+  @extend %layout-row;
+  @extend %layout-align-start-center;
+  width: $bwu-item-icon-width;
+}
+
+@include bwu-icon-item();

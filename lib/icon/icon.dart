@@ -16,9 +16,10 @@ import 'package:bwu_ng_elements/icon/iconset_registry.dart'
 import 'package:bwu_ng_elements/icon/iconset_svg.dart' show BwuIconSetSvg;
 import 'dart:html' show Element;
 
+/// Display an icon provided by an icon set.
 @Component(
     selector: 'bwu-icon',
-    encapsulation: ViewEncapsulation.Native,
+    //encapsulation: ViewEncapsulation.Native,
     host: const {'[style.width]': 'width', '[style.height]': 'height',},
     template: '''
 <svg #icon

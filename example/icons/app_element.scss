@@ -10,7 +10,7 @@
 @include layout-padding-margin();
 
 :host {
-  @extend %paper-font-common-base;
+  @extend %bwu-font-common-base;
 }
 
 h2 {

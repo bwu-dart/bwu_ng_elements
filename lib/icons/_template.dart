@@ -10,6 +10,7 @@ library bwu_ng_elements.icons.communication;
 import 'package:angular2/core.dart' show Component;
 import 'package:bwu_ng_elements/icon.dart' show BwuIcon, BwuIconSetSvg;
 
+/// The communications icons from the Material Design icons
 @Component(
     selector: 'bwu-communications-icons',
     directives: const [BwuIconSetSvg],

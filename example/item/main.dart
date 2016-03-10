@@ -13,7 +13,8 @@ import 'package:angular2/core.dart' show Component, OnInit, provide;
 import 'package:bwu_ng_elements/icons.dart'
     show
         BwuIcons;
-
+import 'package:bwu_ng_elements/item/icon_item.dart';
+///
 void main() {
 //  enableProdMode();
   bootstrap(AppElement, [
@@ -24,24 +25,39 @@ void main() {
   ]);
 }
 
+/// Example root component
 @Component(
     selector: 'app-element',
     directives: const [
       BwuIcon,
       BwuIcons,
-      BwuItem
+      BwuItem,
+      BwuIconItem
     ],
 //styleUrls: const ['app_element.css'],
+styles: const ['''
+  .container {
+    border: solid 1px red;
+    width: 180px;
+  }'''
+],
     template: '''
+<bwu-icons></bwu-icons>
 <h1>BWU NG Elements Item Demo</h1>
-<bwu-item>Item</bwu-item>
-
+<div class="container">
+  <bwu-item>Item</bwu-item>
+  <bwu-icon-item>
+    <bwu-icon icon="inbox" item-icon></bwu-icon>
+    Inbox
+  </bwu-icon-item>
+<div>
 ''')
 class AppElement implements OnInit {
   IconSetRegistry _iconSets;
 
   List<String> iconSetNames;
 
+  ///
   AppElement(this._iconSets);
 
   @override
