@@ -19,7 +19,7 @@ import 'package:bwu_ng_elements/item.dart';
       'tabindex': '0',
       'role': 'option',
       '[class.bwu-active]': 'isActive'
-    } //,
-//    encapsulation: ViewEncapsulation.Native
-    )
+    },
+    encapsulation: ViewEncapsulation.Native
+)
 class BwuIconItem extends BwuItem {}

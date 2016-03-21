@@ -11,9 +11,9 @@ import 'package:angular2/core.dart' show Component, Input, ViewEncapsulation;
       'tabindex': '0',
       'role': 'option',
       '[class.bwu-active]': 'isActive'
-    } //,
-//    encapsulation: ViewEncapsulation.Native
-    )
+    },
+    encapsulation: ViewEncapsulation.Native
+)
 class BwuItem {
   /// Whether the item is in active state.
   @Input()

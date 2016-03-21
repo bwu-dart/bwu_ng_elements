@@ -9,7 +9,7 @@ import 'package:bwu_ng_elements/icon.dart'
     show BwuIcon, BwuIconSetSvg, IconSetRegistry;
 import 'package:bwu_ng_elements/item.dart' show BwuItem;
 
-import 'package:angular2/core.dart' show Component, OnInit, provide;
+import 'package:angular2/core.dart' show Component, OnInit, ViewEncapsulation, provide;
 import 'package:bwu_ng_elements/icons.dart' show BwuIcons;
 import 'package:bwu_ng_elements/item/icon_item.dart';
 
@@ -24,10 +24,22 @@ void main() {
   ]);
 }
 
+///
+@Component(
+    selector: 'content-element',
+//    encapsulation: ViewEncapsulation.Native,
+    template: '''
+<div>
+  <ng-content></ng-content>
+<div>
+''')
+class ContentElement  {
+}
+
 /// Example root component
 @Component(
     selector: 'app-element',
-    directives: const [BwuIcon, BwuIcons, BwuItem, BwuIconItem],
+    directives: const [BwuIcon, BwuIcons, BwuItem, BwuIconItem, ContentElement],
 //styleUrls: const ['app_element.css'],
     styles: const [
       '''
@@ -40,11 +52,12 @@ void main() {
 <bwu-icons></bwu-icons>
 <h1>BWU NG Elements Item Demo</h1>
 <div class="container">
-  <bwu-item>Item</bwu-item>
-  <bwu-icon-item>
-    <bwu-icon icon="inbox" item-icon></bwu-icon>
-    Inbox
+
+  <bwu-icon-item *ngFor="#item of iconSetNames">
+    <bwu-icon *ngIf="item.length > 3" icon="chevron-right"
+              width="14px" class="has-submenu"></bwu-icon>
   </bwu-icon-item>
+
 <div>
 ''')
 class AppElement implements OnInit {
