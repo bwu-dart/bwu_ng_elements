@@ -14,6 +14,7 @@ import 'package:bwu_ng_elements/icon.dart' show BwuIcon, BwuIconSetSvg;
 @Component(
     selector: 'bwu-communications-icons',
     directives: const [BwuIconSetSvg],
+    host: const {'[style.display]': '"none !important"'},
     template: '''
 <bwu-iconset-svg name="_default_" >
 <svg><defs>

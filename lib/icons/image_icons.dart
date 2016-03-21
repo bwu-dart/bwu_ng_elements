@@ -10,9 +10,11 @@ library bwu_ng_elements.icons.image;
 import 'package:angular2/core.dart' show Component;
 import 'package:bwu_ng_elements/icon.dart' show BwuIcon, BwuIconSetSvg;
 
+/// The material Image icons.
 @Component(
     selector: 'bwu-image-icons',
     directives: const [BwuIconSetSvg],
+    host: const {'[style.display]': '"none"'},
     template: '''
 <bwu-iconset-svg name="image" >
 <svg><defs>

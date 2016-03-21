@@ -10,10 +10,9 @@ import 'package:bwu_ng_elements/icon.dart'
 import 'package:bwu_ng_elements/item.dart' show BwuItem;
 
 import 'package:angular2/core.dart' show Component, OnInit, provide;
-import 'package:bwu_ng_elements/icons.dart'
-    show
-        BwuIcons;
+import 'package:bwu_ng_elements/icons.dart' show BwuIcons;
 import 'package:bwu_ng_elements/item/icon_item.dart';
+
 ///
 void main() {
 //  enableProdMode();
@@ -28,19 +27,15 @@ void main() {
 /// Example root component
 @Component(
     selector: 'app-element',
-    directives: const [
-      BwuIcon,
-      BwuIcons,
-      BwuItem,
-      BwuIconItem
-    ],
+    directives: const [BwuIcon, BwuIcons, BwuItem, BwuIconItem],
 //styleUrls: const ['app_element.css'],
-styles: const ['''
+    styles: const [
+      '''
   .container {
     border: solid 1px red;
     width: 180px;
   }'''
-],
+    ],
     template: '''
 <bwu-icons></bwu-icons>
 <h1>BWU NG Elements Item Demo</h1>
@@ -55,6 +50,7 @@ styles: const ['''
 class AppElement implements OnInit {
   IconSetRegistry _iconSets;
 
+  /// The list of names of the register icon sets.
   List<String> iconSetNames;
 
   ///
@@ -69,6 +65,7 @@ class AppElement implements OnInit {
     });
   }
 
+  /// Returns a list of names of all icons contained in the [iconSet].
   List<String> iconNames(String iconSet) =>
       _iconSets.iconSets[iconSet].iconNames;
 }

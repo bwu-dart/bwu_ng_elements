@@ -9,12 +9,17 @@ $bwu-item-disabled-color: $disabled-text-color !default;
   position: relative;
   min-height: $bwu-item-min-height;
   padding: 0 16px;
+  //border: 1px solid rgba(255, 255, 255, .0);
+  box-sizing: border-box;
 }
 :host([hidden]) {
   display: none !important;
 }
 :host(.bwu-selected) {
   font-weight: $bwu-item-selected-weight;
+}
+:host(.bwu-active) {
+  background-color: map-get($md-grey, 300);
 }
 :host([disabled]) {
   color: $bwu-item-disabled-color;
@@ -23,7 +28,7 @@ $bwu-item-disabled-color: $disabled-text-color !default;
   position: relative;
   outline: 0;
 }
-:host(:focus):before {
+:host(:focus):before, :host(.bwu-active):before {
   @extend %layout-fill; //%layout-fit;
   background: currentColor;
   content: '';

@@ -10,9 +10,11 @@ library bwu_ng_elements.icons.notification;
 import 'package:angular2/core.dart' show Component;
 import 'package:bwu_ng_elements/icon.dart' show BwuIcon, BwuIconSetSvg;
 
+/// The material Notification icons.
 @Component(
     selector: 'bwu-notification-icons',
     directives: const [BwuIconSetSvg],
+    host: const {'[style.display]': '"none"'},
     template: '''
 <bwu-iconset-svg name="notification" >
 <svg><defs>

@@ -38,29 +38,7 @@ import 'dart:html' show Element;
 }'''
     ])
 class BwuIcon implements AfterViewInit, OnChanges {
-  SvgElement _svgIcon;
-  SvgElement get svgIcon => _svgIcon;
-
-  @ViewChild('icon')
-  ElementRef iconRef;
-
-  String _width;
-  @Input()
-  String get width => _width ?? '24px';
-  @Input()
-  void set width(String value) {
-    _width = value;
-  }
-
-  String _height;
-  @Input()
-  String get height => _height ?? width;
-  @Input()
-  void set height(String value) {
-    _height = value;
-  }
-
-  IconSetRegistry _iconSetRegistry;
+  ///
   BwuIcon(this._iconSetRegistry) {
     _iconSetRegistry.iconSetAdded.listen((String iconSetName) {
       if (_svgIcon == null && icon != null && icon.isNotEmpty) {
@@ -69,18 +47,59 @@ class BwuIcon implements AfterViewInit, OnChanges {
     });
   }
 
+  SvgElement _svgIcon;
+
+  /// Returns the SVG of the icon.
+  SvgElement get svgIcon => _svgIcon;
+
+  @ViewChild('icon')
+
+  /// The DOM element where the icon is appended when inserted into the DOM.
+  ElementRef iconRef;
+
+  String _width;
+
+  /// Get the current element width.
+  @Input()
+  String get width => _width ?? '24px';
+
+  /// Set the element width.
+  @Input()
+  set width(String value) {
+    _width = value;
+  }
+
+  String _height;
+
+  /// Get the current element width.
+  @Input()
+  String get height => _height ?? width;
+
+  /// Set the element width.
+  @Input()
+  set height(String value) {
+    _height = value;
+  }
+
+  IconSetRegistry _iconSetRegistry;
+
+  /// The id of the icon.
+  /// For an icon of the default iconset this is just the icon name, for icons
+  /// of other iconsets the format is `IconSetName:IconName`.
   @Input()
   String icon;
 
+  /// The viewbox size used for the icon.
   @Input()
-  int size;
+  String size;
 
+  /// Get the viewbox size string calculated from [size].
   String get viewBoxSize {
     if (size != null) {
       return '0 0 $size $size';
     }
     final BwuIconSetSvg iconSet = _getIconSet(icon);
-    if(iconSet == null) {
+    if (iconSet == null) {
       return '0 0 ${BwuIconSetSvg.defaultSize} ${BwuIconSetSvg.defaultSize}';
     }
     return '0 0 ${iconSet.size} ${iconSet.size}';

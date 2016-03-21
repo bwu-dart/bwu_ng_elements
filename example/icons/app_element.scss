@@ -13,6 +13,10 @@
   @extend %bwu-font-common-base;
 }
 
+h1, h2 {
+  padding-left: 24px;
+}
+
 h2 {
   text-transform: capitalize;
 }

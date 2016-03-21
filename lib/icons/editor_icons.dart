@@ -10,9 +10,11 @@ library bwu_ng_elements.icons.editor;
 import 'package:angular2/core.dart' show Component;
 import 'package:bwu_ng_elements/icon.dart' show BwuIcon, BwuIconSetSvg;
 
+/// The material Editor icons.
 @Component(
     selector: 'bwu-editor-icons',
     directives: const [BwuIconSetSvg],
+    host: const {'[style.display]': '"none"'},
     template: '''
 <bwu-iconset-svg name="editor" >
 <svg><defs>

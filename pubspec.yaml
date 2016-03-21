@@ -6,6 +6,7 @@ homepage: https://github.com/bwu-dart/bwu_ng_elements
 environment:
   sdk: '>=1.8.0 <2.0.0'
 
+
 dependencies:
   angular2: ^2.0.0-beta
   browser: ^0.10.0
@@ -28,7 +29,7 @@ transformers:
 #    copy-sources: false           # Copy original .scss/.sass files to output directory
 - angular2:
     entry_points:
-    - web/main.dart
+    - example/icon/main.dart
     - example/icons/main.dart
     - example/item/main.dart
     mirror_mode: verbose

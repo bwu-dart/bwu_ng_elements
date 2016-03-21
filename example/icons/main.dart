@@ -22,6 +22,7 @@ import 'package:bwu_ng_elements/icons.dart'
         BwuPlacesIcons,
         BwuSocialIcons;
 
+///
 void main() {
 //  enableProdMode();
   bootstrap(AppElement, [
@@ -32,6 +33,7 @@ void main() {
   ]);
 }
 
+/// The root component
 @Component(
     selector: 'app-element',
     directives: const [
@@ -48,7 +50,7 @@ void main() {
       BwuPlacesIcons,
       BwuSocialIcons
     ],
-styleUrls: const ['app_element.css'],
+    styleUrls: const ['app_element.css'],
     template: '''
 <h1>BWU NG Elements Icons Demo</h1>
 <bwu-icons></bwu-icons>
@@ -72,13 +74,14 @@ styleUrls: const ['app_element.css'],
     </span>
   </div>
 </template>
-<!--<bwu-icon width="50px" icon="accessibility" style="stroke: red; color: blue; fill: green;"></bwu-icon>-->
 ''')
 class AppElement implements OnInit {
   IconSetRegistry _iconSets;
 
+  /// The list of names of the register icon sets.
   List<String> iconSetNames;
 
+  ///
   AppElement(this._iconSets);
 
   @override
@@ -90,6 +93,7 @@ class AppElement implements OnInit {
     });
   }
 
+  /// Returns a list of names of all icons contained in the [iconSet].
   List<String> iconNames(String iconSet) =>
       _iconSets.iconSets[iconSet].iconNames;
 }

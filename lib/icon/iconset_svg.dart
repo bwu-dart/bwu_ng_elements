@@ -11,28 +11,40 @@ import 'package:angular2/core.dart'
         QueryList,
         SimpleChange;
 import 'dart:svg' show SvgElement;
-import 'package:bwu_ng_elements/icon/iconset_registry.dart' show IconSetRegistry;
+import 'package:bwu_ng_elements/icon/iconset_registry.dart'
+    show IconSetRegistry;
 
+/// Allows to provide a set of icons under a name.
 @Component(
     selector: 'bwu-iconset-svg',
     template: '<ng-content></ng-content>',
     styles: const [':host { display: none; }'])
 class BwuIconSetSvg implements OnChanges, AfterContentInit {
+  /// The default value for the size property.
   static int defaultSize = 24;
 
+  ///
+  BwuIconSetSvg(this._iconSetRegistry);
+
+  /// References to the icons contained in the icon set.
   @ContentChildren('icon')
   QueryList<ElementRef> icons;
 
   Map<String, SvgElement> _icons;
 
+  /// The name of the icon set is registered with.
   @Input()
   String name;
 
   int _size = defaultSize;
+
+  /// The size of the icons in the icon set.
   @Input()
   int get size => _size;
+
+  /// Read the size from the attribute.
   @Input()
-  void set size(int value) {
+  set size(int value) {
     if (value == null || value < 0) {
       return;
     }
@@ -40,8 +52,6 @@ class BwuIconSetSvg implements OnChanges, AfterContentInit {
   }
 
   final IconSetRegistry _iconSetRegistry;
-
-  BwuIconSetSvg(this._iconSetRegistry);
 
   @override
   void ngOnChanges(Map<String, SimpleChange> changes) {
@@ -68,11 +78,15 @@ class BwuIconSetSvg implements OnChanges, AfterContentInit {
     _iconSetRegistry.add(name, this);
   }
 
+  /// Get a list of IDs of the icons contained in this icon set.
   List<String> get iconNames {
-    final String iconSetPrefix = name == _iconSetRegistry.defaultIconSetName ? '' : '$name:';
-    return _icons.keys.map((String id) => '$iconSetPrefix$id').toList();
+    final String iconSetPrefix =
+        name == _iconSetRegistry.defaultIconSetName ? '' : '$name:';
+    return _icons.keys.map((String id) => '$iconSetPrefix$id').toList()
+        as List<String>;
   }
 
+  /// Return the SVG for the icon [id].
   SvgElement getIcon(String id) => _icons[id]?.clone(true);
 
   Map<String, SvgElement> _createIconMap() {

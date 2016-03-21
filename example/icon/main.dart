@@ -11,6 +11,7 @@ import 'package:bwu_ng_elements/icon.dart'
 import 'package:angular2/core.dart' show Component;
 import 'package:bwu_ng_elements/icons.dart' show BwuIcons;
 
+///
 void main() {
 //  enableProdMode();
   bootstrap(AppElement, [
@@ -21,6 +22,7 @@ void main() {
   ]);
 }
 
+/// The root component.
 @Component(
     selector: 'app-element',
     directives: const [BwuIcons, BwuIcon],
