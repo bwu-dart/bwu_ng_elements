@@ -1,0 +1,64 @@
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+[tabindex='-1']:focus {
+  outline: none; }
+
+select,
+button,
+textarea,
+input {
+  vertical-align: baseline; }
+
+input[type="reset"],
+input[type="submit"],
+html input[type="button"],
+button {
+  cursor: pointer;
+  -webkit-appearance: button; }
+  input[type="reset"][disabled],
+  input[type="submit"][disabled],
+  html input[type="button"][disabled],
+  button[disabled] {
+    cursor: default; }
+
+textarea {
+  vertical-align: top;
+  overflow: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box; }
+  input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none; }
+
+/*
+ * A container inside of a rippling element (eg a button),
+ * which contains all of the individual ripples
+ */
+/* Source: https://github.com/angular/material */
+html, body {
+  height: 100%;
+  color: rgba(0, 0, 0, 0.87);
+  background: white;
+  position: relative; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+/* Source: https://github.com/angular/material */
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+

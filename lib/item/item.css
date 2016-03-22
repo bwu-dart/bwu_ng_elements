@@ -1,0 +1,135 @@
+/* opacity for dark text on a light background */
+/* or hint text or icon */
+/* opacity for light text on a dark background */
+/* or hint text or icon */
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+/*
+*
+*  Responsive attributes
+*
+*  References:
+*  1) https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties#flex
+*  2) https://css-tricks.com/almanac/properties/f/flex/
+*  3) https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*  4) https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items
+*  5) http://godban.com.ua/projects/flexgrid
+*
+*
+*/
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+/* Source: https://github.com/angular/material */
+/*
+md-select, md-card, md-list, md-toolbar,
+ul, ol, p, h1, h2, h3, h4, h5, h6 {
+  //text-rendering: optimizeLegibility;
+}
+*/
+/************
+ * Headings
+ ************/
+/************
+ * Body Copy
+ ************/
+/************
+ * Defaults
+ ************/
+/* Shared Styles */
+:host {
+  font-family: 'Roboto', 'Noto', sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+/* Material Font Styles */
+:host {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; }
+
+
+:host {
+  justify-content: flex-start; }
+
+:host {
+  align-items: center;
+  align-content: center;
+  max-width: 100%; }
+
+:host > * {
+  max-width: 100%;
+  box-sizing: border-box; }
+
+:host > .flex, :host > .flex {
+  min-width: 0; }
+
+:host {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+:host {
+  flex-direction: row; }
+
+:host {
+  display: block;
+  position: relative;
+  min-height: 32px;
+  padding: 0 16px;
+  box-sizing: border-box; }
+
+:host([hidden]) {
+  display: none !important; }
+
+:host(.bwu-selected) {
+  font-weight: bold; }
+
+:host(.bwu-active) {
+  background-color: #e0e0e0; }
+
+:host([disabled]) {
+  color: #9b9b9b; }
+
+:host(:focus) {
+  position: relative;
+  outline: 0; }
+
+:host(:focus):before, :host(.bwu-active):before {
+  background: currentColor;
+  content: '';
+  opacity: 0.12;
+  pointer-events: none; }
+
+
+:host {
+  justify-content: flex-start; }
+
+:host {
+  align-items: center;
+  align-content: center;
+  max-width: 100%; }
+
+:host > * {
+  max-width: 100%;
+  box-sizing: border-box; }
+
+:host > .flex, :host > .flex {
+  min-width: 0; }
+
+:host {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+:host {
+  flex-direction: row; }
+
