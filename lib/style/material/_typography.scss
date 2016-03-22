@@ -7,8 +7,8 @@
 // [4] Fonts on OSX will look more consistent with other systems that do not
 // render text using sub-pixel anti-aliasing.
 
-@import 'variables';
-@import 'mixins';
+@import '_variables';
+@import '_mixins';
 
 /*
 md-select, md-card, md-list, md-toolbar,

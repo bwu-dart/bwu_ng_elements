@@ -22,6 +22,7 @@ $bwu-item-icon-width: 56px !default;
   @extend %layout-row;
   @extend %layout-align-start-center;
   width: $bwu-item-icon-width;
+
 }
 
 @include bwu-icon-item();

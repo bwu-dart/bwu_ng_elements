@@ -14,7 +14,7 @@
 *
 */
 
-@import 'variables';
+@import '_variables';
 
 @mixin flex-order-for-name($sizes:null) {
   @if $sizes == null {

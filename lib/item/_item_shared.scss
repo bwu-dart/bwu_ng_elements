@@ -1,6 +1,6 @@
 $bwu-item-min-height: 48px !default;
 $bwu-item-selected-weight: bold !default;
-$bwu-item-disabled-color: $disabled-text-color !default;
+$bwu-item-disabled-color: map-get($md-light-theme-foreground, disabled-text) !default;
 
 @include layouts-for-breakpoint();
 
@@ -9,7 +9,6 @@ $bwu-item-disabled-color: $disabled-text-color !default;
   position: relative;
   min-height: $bwu-item-min-height;
   padding: 0 16px;
-  //border: 1px solid rgba(255, 255, 255, .0);
   box-sizing: border-box;
 }
 :host([hidden]) {

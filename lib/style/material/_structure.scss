@@ -1,7 +1,7 @@
 /* Source: https://github.com/angular/material */
 
-@import 'variables';
-@import 'mixins';
+@import '_variables';
+@import '_mixins';
 
 [tabindex='-1']:focus {
   outline: none;
@@ -151,7 +151,7 @@ input {
     top: 0;
     bottom: 0;
     z-index: $z-index-scroll-mask;
-    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.3)
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3)
   }
 }
 

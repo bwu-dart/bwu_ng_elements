@@ -11,18 +11,7 @@
  source: https://raw.githubusercontent.com/PolymerElements/paper-styles/master/default-theme.html
 */
 
-/*
- * You can use these generic variables in your elements for easy theming.
- * For example, if all your elements use `--primary-text-color` as its main
- * color, then switching from a light to a dark theme is just a matter of
- * changing the value of `--primary-text-color` in your application.
- */
-$primary-text-color: $light-theme-text-color;
-$primary-background-color: $light-theme-background-color;
-$secondary-text-color: $light-theme-secondary-color;
-$disabled-text-color: $light-theme-disabled-color;
-$divider-color: $light-theme-divider-color;
-$error-color: $paper-deep-orange-a700;
+@import '_palette';
 
 /*
  * Primary and accent colors. Also see color.html for more colors.
@@ -55,3 +44,16 @@ $dark-theme-text-color: #ffffff;
 $dark-theme-secondary-color: #bcbcbc;  /* for secondary text and icons */
 $dark-theme-disabled-color: #646464;  /* disabled/hint text */
 $dark-theme-divider-color: #3c3c3c;
+
+/*
+ * You can use these generic variables in your elements for easy theming.
+ * For example, if all your elements use `--primary-text-color` as its main
+ * color, then switching from a light to a dark theme is just a matter of
+ * changing the value of `--primary-text-color` in your application.
+ */
+$primary-text-color: $light-theme-text-color;
+$primary-background-color: $light-theme-background-color;
+$secondary-text-color: $light-theme-secondary-color;
+$disabled-text-color: $light-theme-disabled-color;
+$divider-color: $light-theme-divider-color;
+$error-color: map-get($md-deep-orange, A700); //$paper-deep-orange-a700;

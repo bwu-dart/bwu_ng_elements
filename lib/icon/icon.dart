@@ -34,7 +34,7 @@ import 'dart:html' show Element;
       '''
 :host {
   display: block;
-  fill: currentcolor;
+  fill: currentColor;
 }'''
     ])
 class BwuIcon implements AfterViewInit, OnChanges {
