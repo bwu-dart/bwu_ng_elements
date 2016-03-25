@@ -2,14 +2,14 @@ library bwu_ng_elements.icon.iconset_svg;
 
 import 'package:angular2/core.dart'
     show
-        AfterContentInit,
-        Component,
-        ContentChildren,
-        ElementRef,
-        Input,
-        OnChanges,
-        QueryList,
-        SimpleChange;
+    AfterContentInit,
+    Component,
+    ContentChildren,
+    ElementRef,
+    Input,
+    OnChanges,
+    QueryList,
+    SimpleChange;
 import 'dart:svg' show SvgElement;
 import 'package:bwu_ng_elements/icon/iconset_registry.dart'
     show IconSetRegistry;
@@ -81,9 +81,9 @@ class BwuIconSetSvg implements OnChanges, AfterContentInit {
   /// Get a list of IDs of the icons contained in this icon set.
   List<String> get iconNames {
     final String iconSetPrefix =
-        name == _iconSetRegistry.defaultIconSetName ? '' : '$name:';
-    return _icons.keys.map((String id) => '$iconSetPrefix$id').toList()
-        as List<String>;
+    name == _iconSetRegistry.defaultIconSetName ? '' : '$name:';
+    return _icons.keys.map /*<String>*/((String id) => '$iconSetPrefix$id')
+        .toList() as List<String>;
   }
 
   /// Return the SVG for the icon [id].
