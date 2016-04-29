@@ -60,10 +60,10 @@ void main() {
 <bwu-places-icons></bwu-places-icons>
 <bwu-social-icons></bwu-social-icons>
 
-<template ngFor #iconSet [ngForOf]="iconSetNames" >
+<template ngFor let-iconSet [ngForOf]="iconSetNames" >
   <h2>{{iconSet}}</h2>
   <div class="set">
-    <span *ngFor="#icon of iconNames(iconSet)" class="container">
+    <span *ngFor="let icon of iconNames(iconSet)" class="container">
       <bwu-icon [icon]="icon"></bwu-icon>
       <div class="icon-title">{{icon}}</div>
     </span>
