@@ -1,6 +1,6 @@
 library bwu_ng_elements.item.item;
 
-import 'package:angular2/core.dart' show Component, Input, ViewEncapsulation;
+import 'package:angular2/core.dart' show Component, Input;
 
 /// An interactive list item. By default, it is a horizontal flexBox.
 @Component(

@@ -6,7 +6,6 @@ homepage: https://github.com/bwu-dart/bwu_ng_elements
 environment:
   sdk: '>=1.8.0 <2.0.0'
 
-
 dependencies:
   angular2: ^2.0.0-beta
   browser: ^0.10.0
@@ -16,6 +15,7 @@ dev_dependencies:
   dart_to_js_script_rewriter: ^0.1.0
   bwu_sass_transformer:
     path: ../bwu_sass_transformer
+  bwu_grinder_tasks: '^0.1.0'
 transformers:
 # transformer options
 # https://github.com/angular/angular/blob/master/modules_dart/transform/lib/src/transform/common/options.dart#L20

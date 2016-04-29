@@ -8,7 +8,7 @@
 library bwu_ng_elements.icons.editor;
 
 import 'package:angular2/core.dart' show Component;
-import 'package:bwu_ng_elements/icon.dart' show BwuIcon, BwuIconSetSvg;
+import 'package:bwu_ng_elements/icon.dart' show BwuIconSetSvg;
 
 /// The material Editor icons.
 @Component(

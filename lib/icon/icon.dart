@@ -8,8 +8,7 @@ import 'package:angular2/core.dart'
         Input,
         OnChanges,
         SimpleChange,
-        ViewChild,
-        ViewEncapsulation;
+        ViewChild;
 import 'dart:svg' show SvgElement;
 import 'package:bwu_ng_elements/icon/iconset_registry.dart'
     show IconSetRegistry;

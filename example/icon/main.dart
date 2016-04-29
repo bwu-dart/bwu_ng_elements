@@ -1,14 +1,9 @@
 import 'package:angular2/angular2.dart' show provide;
-import 'package:angular2/router.dart'
-    show
-        APP_BASE_HREF,
-        HashLocationStrategy,
-        LocationStrategy,
-        ROUTER_PROVIDERS;
-import 'package:angular2/bootstrap.dart' show bootstrap;
-import 'package:bwu_ng_elements/icon.dart'
-    show BwuIcon, BwuIconSetSvg, IconSetRegistry;
 import 'package:angular2/core.dart' show Component;
+import 'package:angular2/platform/common.dart' show APP_BASE_HREF;
+import 'package:angular2/platform/browser.dart' show bootstrap;
+import 'package:angular2/router.dart' show ROUTER_PROVIDERS;
+import 'package:bwu_ng_elements/icon.dart' show BwuIcon, IconSetRegistry;
 import 'package:bwu_ng_elements/icons.dart' show BwuIcons;
 
 ///
